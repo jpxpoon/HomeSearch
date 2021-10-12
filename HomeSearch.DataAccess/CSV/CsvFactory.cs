@@ -9,9 +9,9 @@ namespace HomeSearch.DataAccess.CSV
 {
     public class CsvFactory
     {
-        public IList<HomeModel> ReadCSV()
+        public IList<HomeModel> ReadCSV(Stream s)
         {
-            using (var reader = new StreamReader(@"C:\Users\Jonathan\source\repos\HomeSearch\HomeSearch.DataAccess\CSV\redfin.csv"))
+            using (var reader = new StreamReader(s))
             {
                 // get titles
                 var titles = new Dictionary<string, int>();
@@ -36,7 +36,7 @@ namespace HomeSearch.DataAccess.CSV
                         City = values[titles["CITY"]],
                         State = values[titles["STATE OR PROVINCE"]],
                         Zip = values[titles["ZIP OR POSTAL CODE"]],
-                        Price = values[titles["PRICE"]] != "" ? decimal.Parse(values[titles["PRICE"]]) : 0,
+                        Price = values[titles["PRICE"]] != "" ? long.Parse(values[titles["PRICE"]]) : 0,
                         Beds = values[titles["BEDS"]] != "" ? decimal.Parse(values[titles["BEDS"]]) : 0,
                         Baths = values[titles["BATHS"]] != "" ? decimal.Parse(values[titles["BATHS"]]) : 0,
                         SquareFeet = values[titles["SQUARE FEET"]] != "" ? long.Parse(values[titles["SQUARE FEET"]]) : 0,

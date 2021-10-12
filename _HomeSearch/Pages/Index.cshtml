@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Search";
+}
+
+<div id="app">
+    {{message}}
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+
+    <form asp-controller="Homes" asp-action="Index">
+        <p>
+            Title: <input type="text" name="SearchString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+
+    @*<table class="table">
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Beds</th>
+                <th>Baths</th>
+                <th>Price</th>
+                <th>Square Feet</th>
+                <th>Property Type</th>
+            </tr>
+        </thead>
+    </table>*@
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts { 
+<script src="~/js/index.js"></script>
+}

@@ -8,18 +8,16 @@ namespace HomeSearch.DataAccess.DAL
 {
     public class HomeDBContext : DbContext
     {
-        private readonly string _connectionString;
-
-        public HomeDBContext(string connectionString)
-        {
-            _connectionString = connectionString;
-        }
+        public HomeDBContext() { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_connectionString);
+            optionsBuilder.UseSqlite("FileName=HomeDB.db");
         }
 
         public DbSet<HomeModel> Homes { get; set; }
+        public DbSet<CityModel> Cities { get; set; }
+        public DbSet<StateModel> States { get; set; }
+        public DbSet<PropertyTypeModel> PropertyTypes { get; set; }
     }
 }
