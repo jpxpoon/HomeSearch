@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeSearch.DataAccess", "Ho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeSearch.Model", "HomeSearch.Model\HomeSearch.Model.csproj", "{2C05EE31-D4F5-4CD0-8077-D7562FC2BCBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeSearch", "HomeSearch\HomeSearch.csproj", "{20C406DC-D421-4628-B906-C2626021D216}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeSearch", "HomeSearch\HomeSearch.csproj", "{20C406DC-D421-4628-B906-C2626021D216}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
